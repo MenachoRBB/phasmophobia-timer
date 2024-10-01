@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Github\\phasmo-ovelay\\phasmo-ovelay\\phasmo-ovelay.csproj",
+      "projectUniqueName": "C:\\Github\\phasmophobia-timer\\phasmo-ovelay\\phasmo-ovelay\\phasmo-ovelay.csproj",
       "projectName": "phasmo-ovelay",
-      "projectPath": "C:\\Github\\phasmo-ovelay\\phasmo-ovelay\\phasmo-ovelay.csproj",
+      "projectPath": "C:\\Github\\phasmophobia-timer\\phasmo-ovelay\\phasmo-ovelay\\phasmo-ovelay.csproj",
       "packagesPath": "C:\\Users\\ivanm\\.nuget\\packages\\",
-      "outputPath": "C:\\Github\\phasmo-ovelay\\phasmo-ovelay\\obj\\",
+      "outputPath": "C:\\Github\\phasmophobia-timer\\phasmo-ovelay\\phasmo-ovelay\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

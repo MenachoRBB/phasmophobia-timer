@@ -1,0 +1,25 @@
+# Archivos y carpetas de Visual Studio
+.vs/
+*.user
+*.suo
+*.obj
+*.exe
+*.dll
+*.log
+*.pdb
+
+# Paquetes NuGet
+packages/
+*.nupkg
+
+# Archivos de compilación
+bin/
+obj/
+
+# Directorios de caché de dependencias
+node_modules/
+
+# Archivos temporales
+*.tmp
+*.bak
+*.swp
