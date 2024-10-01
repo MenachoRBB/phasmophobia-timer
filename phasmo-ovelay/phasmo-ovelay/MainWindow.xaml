@@ -10,10 +10,11 @@
         Width="200" 
         Height="100">
     <Grid>
-        <!-- Texto del cronómetro -->
+        <!-- Texto del cronómetro centrado-->
         <TextBlock x:Name="CronoText" Text="00:00" FontSize="48" 
-                   Foreground="White" 
-                   HorizontalAlignment="Center" 
-                   VerticalAlignment="Center"/>
+               Foreground="White" 
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Top" Margin="0,10,0,0"/>
+
     </Grid>
 </Window>
