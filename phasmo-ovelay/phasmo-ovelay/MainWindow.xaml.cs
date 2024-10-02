@@ -49,6 +49,10 @@ namespace phasmo_ovelay
                     StartCronometro(); // Iniciar el cronómetro
                 }
             }
+            else if (e.Key == Key.D2) // Si se presiona '2', reiniciar el cronómetro
+            {
+                ResetCronometro(); // Reiniciar el cronómetro
+            }
         }
 
         // Iniciar el cronómetro
@@ -63,11 +67,18 @@ namespace phasmo_ovelay
             _timer.Stop();
         }
 
+        // Reiniciar el cronómetro
+        private void ResetCronometro()
+        {
+            _time = TimeSpan.Zero; // Reiniciar el tiempo a cero
+            CronoText.Text = _time.ToString(@"mm\:ss"); // Actualizar el texto del cronómetro
+        }
+
         // Actualizar el cronómetro cada segundo
         private void Timer_Tick(object sender, EventArgs e)
         {
-            _time = _time.Add(TimeSpan.FromSeconds(1));
-            CronoText.Text = _time.ToString(@"mm\:ss");
+            _time = _time.Add(TimeSpan.FromSeconds(1)); // Aumentar el tiempo en 1 segundo
+            CronoText.Text = _time.ToString(@"mm\:ss"); // Actualizar el texto del cronómetro
         }
     }
 }

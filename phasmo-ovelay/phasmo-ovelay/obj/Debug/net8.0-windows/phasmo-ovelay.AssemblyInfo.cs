@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("phasmo-ovelay")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3404468522481e0cce4c47c3f25e65bf78f3d00d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+18c2b8667a7361623cccf3b05ce43d77ce096e1b")]
 [assembly: System.Reflection.AssemblyProductAttribute("phasmo-ovelay")]
 [assembly: System.Reflection.AssemblyTitleAttribute("phasmo-ovelay")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
