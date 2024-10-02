@@ -1,4 +1,4 @@
-![Phasmophobia Timer Banner](utils/banner.jpg)
+![Phasmophobia Timer Banner](phasmo-ovelay/utils/banner.jpg)
 
 # Phasmophobia Timer Overlay (v1.0-alpha)
 
