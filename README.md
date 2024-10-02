@@ -1,4 +1,4 @@
-# Phasmophobia Timer Overlay
+# Phasmophobia Timer Overlay (still in development)
 
 This project is an overlay timer specifically developed for the game *Phasmophobia*. It is designed to be used during gameplay, helping players track critical times visually without having to exit the game.
 
@@ -38,4 +38,4 @@ Contributions are welcome! If you'd like to improve any functionality or report 
 
 ## License
 
-This project is licensed under the [GNU General Public License v3.0](https://github.com/MenachoRBB/phasmophobia-timer/blob/main/LICENSE).
+This project is licensed under the [MIT License](https://github.com/MenachoRBB/phasmophobia-timer/blob/main/LICENSE).
