@@ -2,6 +2,8 @@
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Threading;
+using Newtonsoft.Json; // Asegúrate de tener esta referencia
+using System.IO;
 
 namespace phasmo_ovelay
 {
@@ -10,12 +12,16 @@ namespace phasmo_ovelay
         private DispatcherTimer _timer;
         private TimeSpan _time;
         private bool _isHidden; // Para controlar si el cronómetro está oculto
+        private Config _config; // Instancia de la clase de configuración
 
         public MainWindow()
         {
             InitializeComponent();
             _time = TimeSpan.Zero;
             _isHidden = false; // Inicialmente, el cronómetro no está oculto
+
+            // Cargar la configuración
+            LoadConfig();
 
             // Crear el temporizador con intervalos de 1 segundo
             _timer = new DispatcherTimer();
@@ -40,10 +46,17 @@ namespace phasmo_ovelay
             CronoText.Text = _time.ToString(@"mm\:ss");
         }
 
+        // Cargar la configuración desde el archivo JSON
+        private void LoadConfig()
+        {
+            string json = File.ReadAllText("config.json");
+            _config = JsonConvert.DeserializeObject<Config>(json);
+        }
+
         // Manejar el evento de tecla pulsada
         private void MainWindow_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.D1) // Si se presiona '1', iniciar/detener el cronómetro
+            if (e.Key.ToString() == _config.StartStopKey) // Tecla para iniciar/detener el cronómetro
             {
                 if (_timer.IsEnabled)
                 {
@@ -54,11 +67,11 @@ namespace phasmo_ovelay
                     StartCronometro(); // Iniciar el cronómetro
                 }
             }
-            else if (e.Key == Key.D2) // Si se presiona '2', reiniciar el cronómetro
+            else if (e.Key.ToString() == _config.ResetKey) // Tecla para reiniciar el cronómetro
             {
                 ResetCronometro(); // Reiniciar el cronómetro
             }
-            else if (e.Key == Key.D3) // Si se presiona '3', ocultar/mostrar el cronómetro
+            else if (e.Key.ToString() == _config.ToggleVisibilityKey) // Tecla para ocultar/mostrar el cronómetro
             {
                 ToggleVisibility(); // Cambiar la visibilidad
             }

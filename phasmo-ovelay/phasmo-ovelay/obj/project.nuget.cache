@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "uhn8emPhWqc=",
+  "dgSpecHash": "ikhhxZ+NrYA=",
   "success": true,
   "projectFilePath": "C:\\Github\\phasmophobia-timer\\phasmo-ovelay\\phasmo-ovelay\\phasmo-ovelay.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ivanm\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

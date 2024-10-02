@@ -9,6 +9,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{AC3FC62B-ED40-4DC0-911A-696B90287585}|phasmo-ovelay\\phasmo-ovelay.csproj|c:\\github\\phasmophobia-timer\\phasmo-ovelay\\phasmo-ovelay\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{AC3FC62B-ED40-4DC0-911A-696B90287585}|phasmo-ovelay\\phasmo-ovelay.csproj|solutionrelative:phasmo-ovelay\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC3FC62B-ED40-4DC0-911A-696B90287585}|phasmo-ovelay\\phasmo-ovelay.csproj|c:\\github\\phasmophobia-timer\\phasmo-ovelay\\phasmo-ovelay\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC3FC62B-ED40-4DC0-911A-696B90287585}|phasmo-ovelay\\phasmo-ovelay.csproj|solutionrelative:phasmo-ovelay\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC3FC62B-ED40-4DC0-911A-696B90287585}|phasmo-ovelay\\phasmo-ovelay.csproj|c:\\github\\phasmophobia-timer\\phasmo-ovelay\\phasmo-ovelay\\config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AC3FC62B-ED40-4DC0-911A-696B90287585}|phasmo-ovelay\\phasmo-ovelay.csproj|solutionrelative:phasmo-ovelay\\config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +26,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "config.cs",
+              "DocumentMoniker": "C:\\Github\\phasmophobia-timer\\phasmo-ovelay\\phasmo-ovelay\\config.cs",
+              "RelativeDocumentMoniker": "phasmo-ovelay\\config.cs",
+              "ToolTip": "C:\\Github\\phasmophobia-timer\\phasmo-ovelay\\phasmo-ovelay\\config.cs*",
+              "RelativeToolTip": "phasmo-ovelay\\config.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T20:40:31.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "config.json",
+              "DocumentMoniker": "C:\\Github\\phasmophobia-timer\\phasmo-ovelay\\phasmo-ovelay\\config.json",
+              "RelativeDocumentMoniker": "phasmo-ovelay\\config.json",
+              "ToolTip": "C:\\Github\\phasmophobia-timer\\phasmo-ovelay\\phasmo-ovelay\\config.json",
+              "RelativeToolTip": "phasmo-ovelay\\config.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-02T20:39:51.094Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -38,9 +72,9 @@
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Github\\phasmophobia-timer\\phasmo-ovelay\\phasmo-ovelay\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "phasmo-ovelay\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Github\\phasmophobia-timer\\phasmo-ovelay\\phasmo-ovelay\\MainWindow.xaml.cs",
-              "RelativeToolTip": "phasmo-ovelay\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAADwv2wAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Github\\phasmophobia-timer\\phasmo-ovelay\\phasmo-ovelay\\MainWindow.xaml.cs*",
+              "RelativeToolTip": "phasmo-ovelay\\MainWindow.xaml.cs*",
+              "ViewState": "AgIAAGEAAAAAAAAAAADwv3wAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-01T20:01:14.291Z",
               "EditorCaption": ""
