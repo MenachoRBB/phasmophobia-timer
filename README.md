@@ -17,7 +17,7 @@ This project is an overlay timer specifically developed for the game *Phasmophob
 
 1. Download the executable file from the [releases](https://github.com/MenachoRBB/phasmophobia-timer/releases) section.
 2. Extract the file to a folder of your choice.
-3. configure the keys according to your preferences and Run `PhasmophobiaTimer.exe`.
+3. Configure the keys according to your preferences and Run `PhasmophobiaTimer.exe`.
 
 ## Usage
 
