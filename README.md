@@ -38,4 +38,4 @@ Contributions are welcome! If you'd like to improve any functionality or report 
 
 ## License
 
-This project is licensed under the [GNU General Public License v3.0](https://github.com/MenachoRBB/phasmophobia-timer/blob/main/LICENSE).
+This project is licensed under the [MIT License](https://github.com/MenachoRBB/phasmophobia-timer/blob/main/LICENSE).
