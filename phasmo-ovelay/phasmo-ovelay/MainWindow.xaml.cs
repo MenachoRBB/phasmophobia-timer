@@ -9,11 +9,13 @@ namespace phasmo_ovelay
     {
         private DispatcherTimer _timer;
         private TimeSpan _time;
+        private bool _isHidden; // Para controlar si el cronómetro está oculto
 
         public MainWindow()
         {
             InitializeComponent();
             _time = TimeSpan.Zero;
+            _isHidden = false; // Inicialmente, el cronómetro no está oculto
 
             // Crear el temporizador con intervalos de 1 segundo
             _timer = new DispatcherTimer();
@@ -33,6 +35,9 @@ namespace phasmo_ovelay
             // Posicionar la ventana en la parte superior del centro de la pantalla
             this.Left = (screenWidth - this.Width) / 2;  // Centrar horizontalmente
             this.Top = 10;  // Un poco por debajo del borde superior
+
+            // Mostrar el cronómetro al iniciar
+            CronoText.Text = _time.ToString(@"mm\:ss");
         }
 
         // Manejar el evento de tecla pulsada
@@ -52,6 +57,10 @@ namespace phasmo_ovelay
             else if (e.Key == Key.D2) // Si se presiona '2', reiniciar el cronómetro
             {
                 ResetCronometro(); // Reiniciar el cronómetro
+            }
+            else if (e.Key == Key.D3) // Si se presiona '3', ocultar/mostrar el cronómetro
+            {
+                ToggleVisibility(); // Cambiar la visibilidad
             }
         }
 
@@ -74,11 +83,29 @@ namespace phasmo_ovelay
             CronoText.Text = _time.ToString(@"mm\:ss"); // Actualizar el texto del cronómetro
         }
 
+        // Cambiar la "visibilidad" del cronómetro (mostrar/ocultar texto)
+        private void ToggleVisibility()
+        {
+            if (_isHidden)
+            {
+                CronoText.Text = _time.ToString(@"mm\:ss"); // Mostrar el cronómetro
+                _isHidden = false; // Actualizar estado
+            }
+            else
+            {
+                CronoText.Text = ""; // Ocultar el cronómetro
+                _isHidden = true; // Actualizar estado
+            }
+        }
+
         // Actualizar el cronómetro cada segundo
         private void Timer_Tick(object sender, EventArgs e)
         {
             _time = _time.Add(TimeSpan.FromSeconds(1)); // Aumentar el tiempo en 1 segundo
-            CronoText.Text = _time.ToString(@"mm\:ss"); // Actualizar el texto del cronómetro
+            if (!_isHidden)
+            {
+                CronoText.Text = _time.ToString(@"mm\:ss"); // Actualizar el texto del cronómetro solo si es visible
+            }
         }
     }
 }
