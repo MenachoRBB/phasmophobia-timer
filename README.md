@@ -1,4 +1,6 @@
-![Phasmophobia Timer Banner](phasmo-ovelay/utils/banner.jpg)
+<div style="text-align:center;">
+  <img src="phasmo-ovelay/utils/banner.jpg" alt="Phasmophobia Timer Banner" />
+</div>
 
 # Phasmophobia Timer Overlay (v1.0-alpha)
 
