@@ -1,4 +1,4 @@
-# Phasmophobia Timer Overlay
+# Phasmophobia Timer Overlay (still in development)
 
 This project is an overlay timer specifically developed for the game *Phasmophobia*. It is designed to be used during gameplay, helping players track critical times visually without having to exit the game.
 
