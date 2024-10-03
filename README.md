@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="phasmo-ovelay/utils/banner.jpg" alt="Phasmophobia Timer Banner" style="display: block; margin: auto;" />
+  <img src="phasmo-ovelay/utils/banner-2.jpg" alt="Phasmophobia Timer Banner" style="display: block; margin: auto;" />
 </p>
 
 # Phasmophobia Timer Overlay (v1.0-alpha)
