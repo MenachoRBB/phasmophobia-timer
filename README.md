@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="phasmo-ovelay/utils/banner.jpg" alt="Phasmophobia Timer Banner" style="display: block; margin: auto;" />
+  <img src="phasmo-ovelay/utils/banner-2.jpg" alt="Phasmophobia Timer Banner" style="display: block; margin: auto;" />
 </p>
 
 # Phasmophobia Timer Overlay (v1.0-alpha)
@@ -17,7 +17,7 @@ This project is an overlay timer specifically developed for the game *Phasmophob
 
 1. Download the executable file from the [releases](https://github.com/MenachoRBB/phasmophobia-timer/releases) section.
 2. Extract the file to a folder of your choice.
-3. configure the keys according to your preferences and Run `PhasmophobiaTimer.exe`.
+3. Configure the keys according to your preferences and Run `PhasmophobiaTimer.exe`.
 
 ## Usage
 
