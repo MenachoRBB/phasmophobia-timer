@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Windows;
-using System.Windows.Input;
 using System.Windows.Threading;
 using Newtonsoft.Json; // Asegúrate de tener esta referencia
 using System.IO;
+using System.Windows.Input;
 
 namespace phasmo_ovelay
 {
@@ -13,6 +13,7 @@ namespace phasmo_ovelay
         private TimeSpan _time;
         private bool _isHidden; // Para controlar si el cronómetro está oculto
         private Config _config; // Instancia de la clase de configuración
+        private GlobalKeyboardHook _globalKeyboardHook; // Instancia del hook global
 
         public MainWindow()
         {
@@ -28,8 +29,10 @@ namespace phasmo_ovelay
             _timer.Interval = TimeSpan.FromSeconds(1);
             _timer.Tick += Timer_Tick;
 
-            // Registrar el evento de teclado
-            this.KeyDown += MainWindow_KeyDown;
+            // Inicializar el hook de teclado global
+            _globalKeyboardHook = new GlobalKeyboardHook();
+            _globalKeyboardHook.HookKeyboard(); // Enganchar el teclado
+            _globalKeyboardHook.KeyPressed += GlobalKeyboardHook_KeyPressed; // Subscribirse al evento
 
             // Obtener el ancho de la pantalla
             var screenWidth = SystemParameters.PrimaryScreenWidth;
@@ -44,6 +47,9 @@ namespace phasmo_ovelay
 
             // Mostrar el cronómetro al iniciar
             CronoText.Text = _time.ToString(@"mm\:ss");
+
+            // Manejar el cierre de la ventana para desenganchar el hook
+            this.Closing += MainWindow_Closing;
         }
 
         // Cargar la configuración desde el archivo JSON
@@ -53,10 +59,23 @@ namespace phasmo_ovelay
             _config = JsonConvert.DeserializeObject<Config>(json);
         }
 
-        // Manejar el evento de tecla pulsada
-        private void MainWindow_KeyDown(object sender, KeyEventArgs e)
+        // Desenganchar el hook al cerrar la aplicación
+        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (e.Key.ToString() == _config.StartStopKey) // Tecla para iniciar/detener el cronómetro
+            _globalKeyboardHook.UnhookKeyboard(); // Desenganchar el hook global
+        }
+
+        // Este método será llamado cuando se presione una tecla globalmente
+        private void GlobalKeyboardHook_KeyPressed(Key key)
+        {
+            ProcessKey(key);
+        }
+
+        // Función para procesar las teclas presionadas globalmente
+        private void ProcessKey(Key key)
+        {
+            // Verificar las teclas configuradas
+            if (key.ToString() == _config.StartStopKey)
             {
                 if (_timer.IsEnabled)
                 {
@@ -67,11 +86,11 @@ namespace phasmo_ovelay
                     StartCronometro(); // Iniciar el cronómetro
                 }
             }
-            else if (e.Key.ToString() == _config.ResetKey) // Tecla para reiniciar el cronómetro
+            else if (key.ToString() == _config.ResetKey)
             {
                 ResetCronometro(); // Reiniciar el cronómetro
             }
-            else if (e.Key.ToString() == _config.ToggleVisibilityKey) // Tecla para ocultar/mostrar el cronómetro
+            else if (key.ToString() == _config.ToggleVisibilityKey)
             {
                 ToggleVisibility(); // Cambiar la visibilidad
             }
